@@ -4,11 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Container from './components/Container'
 import Heading from './components/Heading'
-function App() {
+import { FoodList } from './components/FoodList'
 
+
+
+
+
+function App() {
+let FoodItems = ["Rice", "Dal", "Curry", "Dahi", "Salad", "Paneer", "Pizza"];
   return (
     <Container>
-    <Heading></Heading>
+    <Heading/>
+    <FoodList ItemList={FoodItems}/>
     </Container>
   );
 };
