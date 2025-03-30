@@ -7,8 +7,7 @@ let FoodList = ({ foodItem, removeItem }) => {
     <>
       <ul className={styles.listGroup}>
         {foodItem.map((item, index) => (
-          <ItemsList key={index} item={item} removeItem={removeItem}></ItemsList>
-          
+          <ItemsList key={index} item={item} removeItem={removeItem} index={index}></ItemsList> 
         ))}
       </ul>
     </>

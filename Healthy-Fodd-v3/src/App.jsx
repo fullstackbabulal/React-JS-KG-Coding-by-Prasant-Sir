@@ -18,9 +18,20 @@ function App() {
     }
   };
 
-  let removeItem = (event) => {
-    console.log(event.nativeEvent.pointerId) 
-  };
+  /*let removeItem = (index) => {
+    let newArry = foodItem.filter((item, i) => i !== index);
+    setFoodItem(newArry);
+  };*/
+
+  let removeItem = (index) => {
+    // Ask the user for confirmation
+    const isConfirmed = window.confirm("Are you sure you want to delete this item?");
+    
+    if (isConfirmed) {
+        let newArry = foodItem.filter((item, i) => i !== index);
+        setFoodItem(newArry);
+    };
+};
 
   return (
     <Container>
