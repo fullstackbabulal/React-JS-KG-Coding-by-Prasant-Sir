@@ -25,13 +25,15 @@ function App() {
 
   let removeItem = (index) => {
     // Ask the user for confirmation
-    const isConfirmed = window.confirm("Are you sure you want to delete this item?");
-    
+    const isConfirmed = window.confirm(
+      "Are you sure you want to delete this item?"
+    );
+
     if (isConfirmed) {
-        let newArry = foodItem.filter((item, i) => i !== index);
-        setFoodItem(newArry);
-    };
-};
+      let newArry = foodItem.filter((item, i) => i !== index);
+      setFoodItem(newArry);
+    }
+  };
 
   return (
     <Container>
